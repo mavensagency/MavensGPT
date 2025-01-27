@@ -1,0 +1,141 @@
+/* Chat Widget Styles */
+.wp-gemini-chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.wp-gemini-chat-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.wp-gemini-chat-toggle:hover {
+    transform: scale(1.05);
+}
+
+.wp-gemini-chat-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+}
+
+.wp-gemini-chat-popup.active {
+    display: flex;
+}
+
+.wp-gemini-chat-header {
+    padding: 16px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wp-gemini-chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.wp-gemini-chat-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.wp-gemini-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.wp-gemini-chat-message {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.wp-gemini-chat-message.user {
+    background: #4f46e5;
+    color: white;
+    margin-left: auto;
+}
+
+.wp-gemini-chat-message.bot {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.wp-gemini-chat-message.loading {
+    background: #e5e7eb;
+    color: #6b7280;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.wp-gemini-chat-form {
+    padding: 16px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    gap: 8px;
+}
+
+.wp-gemini-chat-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    outline: none;
+}
+
+.wp-gemini-chat-form input:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.wp-gemini-chat-form button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wp-gemini-chat-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
